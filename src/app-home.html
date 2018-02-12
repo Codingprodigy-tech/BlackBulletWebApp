@@ -1,0 +1,52 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="app-home">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+      .img{
+        max-width: 300px;
+        border-radius: 10px;
+        box-shadow:  5px 5px 10px #ddd;
+        
+      }
+      .card{
+        display: grid;
+        grid-template-columns:  auto 300px;
+        max-height: 500px;
+      }
+      .col1{
+        grid-column-start: 1;
+      }
+      .col2{
+        grid-column-start: 2;
+      }
+    </style>
+
+    <div class="card">
+
+      
+          
+      
+      
+      <div class="col1">
+        <h1>Welcome to blackullet</h1>
+        <p>Bring android notifications to Linux</p>
+      </div>
+      <img class="col2 img"  src="images/screenOnPhone.jpg"/>
+    </div>
+  </template>
+
+  <script>
+    class AppHome extends Polymer.Element {
+      static get is() { return 'app-home'; }
+    }
+
+    window.customElements.define(AppHome.is, AppHome);
+  </script>
+</dom-module>
