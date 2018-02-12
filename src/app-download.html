@@ -1,0 +1,48 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="app-download">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+      .col1{
+        grid-column-start: 1;
+      }
+      .col2{
+        grid-column-start: 2;
+      }
+      .card{
+        display: grid;
+        grid-template-columns:  auto 300px;
+        
+      }
+
+    </style>
+
+    <div class="card">
+
+      
+      <div class="col1">
+        <h1>Download and instalation</h1>
+        <p>Bring android notifications to Linux</p>
+      </div>
+      <div class="col2">
+          <a href="https://www.dropbox.com/s/3vbg9jhlbzepbhv/app-release.apk?dl=0">APK</a>
+          <a href="https://www.dropbox.com/s/fzt2ejdu2ff3qa8/blackbullet.deb?dl=0">DEB</a>
+          <a href="https://www.dropbox.com/s/iqk23pvgwh5h629/release_python_app.tar.gz?dl=0">SRC</a>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    class AppDownload extends Polymer.Element {
+      static get is() { return 'app-download'; }
+    }
+
+    window.customElements.define(AppDownload.is, AppDownload);
+  </script>
+</dom-module>
